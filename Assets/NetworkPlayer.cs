@@ -17,6 +17,12 @@ public class NetworkPlayer : MonoBehaviour
     public GameObject NetWork_LeftHand;
 
     public GameObject NetWork_RightHand;
+    
+    public GameObject Mesh_Head;
+
+    public GameObject Mesh_LeftHand;
+
+    public GameObject Mesh_RightHand;
 
     public PhotonView _Photon; 
     // Start is called before the first frame update
@@ -46,9 +52,9 @@ public class NetworkPlayer : MonoBehaviour
 
         if (_Photon.IsMine)
         {
-            Local_Head.gameObject.GetComponent<MeshRenderer>().enabled = false;
-            Local_LeftHand.gameObject.GetComponent<MeshRenderer>().enabled = false;
-            Local_RightHand.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            Mesh_Head.gameObject.SetActive(false);
+            Mesh_LeftHand.gameObject.SetActive(false);
+            Mesh_RightHand.gameObject.SetActive(false);
         }
         
         Local_Head.transform.position = NetWork_Head.transform.position;
