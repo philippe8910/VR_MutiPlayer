@@ -6,14 +6,22 @@ using UnityEngine;
 public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
 {
     [SerializeField] private GameObject SpaenPlayerPrefab;
-    [SerializeField] private GameObject Cube;
-    
-    [SerializeField] private List<GameObject> PlayerList = new List<GameObject>();
+    [SerializeField] private Transform[] pos;
 
     public override void OnJoinedRoom()
     {
-        SpaenPlayerPrefab = PhotonNetwork.Instantiate("Network Player", transform.position, transform.rotation);
-        PlayerList.Add(Cube);
+        Debug.Log(PhotonNetwork.CountOfPlayers);
+        
+        if (PhotonNetwork.CountOfPlayers == 0)
+        {
+            SpaenPlayerPrefab = PhotonNetwork.Instantiate("Network Player", pos[0].position, transform.rotation);
+        }
+        else
+        {
+            SpaenPlayerPrefab = PhotonNetwork.Instantiate("Network Player", pos[1].position, transform.rotation);
+        }
+        
+        
         base.OnJoinedRoom();
     }
 
