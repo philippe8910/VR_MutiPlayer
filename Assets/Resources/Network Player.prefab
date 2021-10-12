@@ -45,7 +45,6 @@ GameObject:
   - component: {fileID: 8961260515152405505}
   - component: {fileID: 8995392185392706587}
   - component: {fileID: 6416821473792489313}
-  - component: {fileID: 8137978471554088207}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -131,22 +130,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &6416821473792489313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9025357006681180203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
---- !u!114 &8137978471554088207
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -324,6 +307,7 @@ GameObject:
   - component: {fileID: 9026075536752929525}
   - component: {fileID: 9026075536763171733}
   - component: {fileID: 7385286565620614013}
+  - component: {fileID: 6961868399432293608}
   m_Layer: 0
   m_Name: Network Player
   m_TagString: Untagged
@@ -441,11 +425,35 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
+  - {fileID: 6961868399432293608}
   - {fileID: 4468947601795173866}
+  - {fileID: 0}
+  - {fileID: 1266967963489839467}
   - {fileID: 6416821473792489313}
+  - {fileID: 0}
+  - {fileID: 8848525188130769565}
+  - {fileID: 253195267228541224}
+  - {fileID: 8232182743198631704}
+  - {fileID: 9132301054088792609}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &6961868399432293608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9026075536756163031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &9026075536756163307
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,7 +531,6 @@ GameObject:
   - component: {fileID: 9026075536756374749}
   - component: {fileID: 8995392179400814939}
   - component: {fileID: 4468947601795173866}
-  - component: {fileID: 6865054331771048129}
   m_Layer: 0
   m_Name: Controller (left)
   m_TagString: Untagged
@@ -581,22 +588,6 @@ MonoBehaviour:
       m_Calls: []
   broadcastDeviceChanges: 1
 --- !u!114 &4468947601795173866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9026075536756185217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
---- !u!114 &6865054331771048129
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
