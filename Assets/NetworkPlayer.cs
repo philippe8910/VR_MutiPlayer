@@ -46,9 +46,9 @@ public class NetworkPlayer : MonoBehaviour
 
         if (_Photon.IsMine)
         {
-            Local_Head.gameObject.SetActive(false);
-            Local_LeftHand.gameObject.SetActive(false);
-            Local_RightHand.gameObject.SetActive(false);
+            Local_Head.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            Local_LeftHand.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            Local_RightHand.gameObject.GetComponent<MeshRenderer>().enabled = false;
         }
         
         Local_Head.transform.position = NetWork_Head.transform.position;
