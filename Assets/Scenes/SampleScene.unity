@@ -133,6 +133,11 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3843344204738241413, guid: ca6ae884f12478b41bcf87ac301224d8,
+        type: 3}
+      propertyPath: m_SynchronizeScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3843344204738241414, guid: ca6ae884f12478b41bcf87ac301224d8,
         type: 3}
       propertyPath: m_Name
