@@ -36,17 +36,17 @@ public class NetworkPlayer : MonoBehaviour
     {
         if (NetWork_Head == null)
         {
-            NetWork_Head = GameObject.Find("VRCamera");
+            NetWork_Head = PlayerManagermemt.instance.Head;
         }
 
         if (NetWork_RightHand == null)
         {
-            NetWork_RightHand = GameObject.Find("RightHand");
+            NetWork_RightHand = PlayerManagermemt.instance.RightHand;
         }
 
         if (NetWork_LeftHand == null)
         {
-            NetWork_LeftHand = GameObject.Find("LeftHand");
+            NetWork_LeftHand = PlayerManagermemt.instance.LeftHand;
         }
 
 
