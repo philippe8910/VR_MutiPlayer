@@ -1,20 +1,25 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 public class PlayerManagermemt : MonoBehaviour
 {
-    [SerializeField] public  GameObject Head;
+    [Tooltip("The local player instance. Use this to know if the local player is represented in the Scene")]
+    public static GameObject LocalPlayerInstance;
 
-    [SerializeField] public  GameObject RightHand;
-    
-    [SerializeField] public  GameObject LeftHand;
-
-    public static PlayerManagermemt instance;
+    public PhotonView photonView;
 
     private void Awake()
     {
-        instance = this.GetComponent<PlayerManagermemt>();
+        if (photonView.IsMine)
+        {
+            PlayerManagermemt.LocalPlayerInstance = this.gameObject;
+        }
+// #Critical
+// we flag as don't destroy on load so that instance survives level synchronization, thus giving a seamless experience when levels load.
+        DontDestroyOnLoad(this.gameObject);
     }
+    
 }
