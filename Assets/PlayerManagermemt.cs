@@ -7,7 +7,13 @@ using UnityEngine;
 public class PlayerManagermemt : MonoBehaviour
 {
     [Tooltip("The local player instance. Use this to know if the local player is represented in the Scene")]
-    public static GameObject LocalPlayerInstance;
+    public static PlayerManagermemt LocalPlayerInstance;
+
+    [SerializeField] public GameObject RightHand;
+
+    [SerializeField] public GameObject LeftHand;
+
+    [SerializeField] public GameObject HeadHand;
 
     public PhotonView photonView;
 
@@ -15,7 +21,7 @@ public class PlayerManagermemt : MonoBehaviour
     {
         if (photonView.IsMine)
         {
-            PlayerManagermemt.LocalPlayerInstance = this.gameObject;
+            PlayerManagermemt.LocalPlayerInstance = this;
         }
 // #Critical
 // we flag as don't destroy on load so that instance survives level synchronization, thus giving a seamless experience when levels load.

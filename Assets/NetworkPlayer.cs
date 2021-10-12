@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
 using UnityEngine.XR;
-using Valve.VR;
 
 public class NetworkPlayer : MonoBehaviourPun
 {
@@ -35,7 +34,22 @@ public class NetworkPlayer : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
-        
+        if (NetWork_Head == null)
+        {
+            NetWork_Head = PlayerManagermemt.LocalPlayerInstance.HeadHand;
+        }
+
+        if (NetWork_RightHand == null)
+        {
+            NetWork_RightHand = PlayerManagermemt.LocalPlayerInstance.RightHand;
+        }
+
+        if (NetWork_LeftHand == null)
+        {
+            NetWork_LeftHand = PlayerManagermemt.LocalPlayerInstance.LeftHand;
+        }
+
+
         if (_Photon.IsMine)
         {
             Mesh_Head.gameObject.SetActive(false);
@@ -43,24 +57,15 @@ public class NetworkPlayer : MonoBehaviourPun
             Mesh_RightHand.gameObject.SetActive(false);
         }
         
-        SteamVR_Action_Pose poseActionR;
-        poseActionR = SteamVR_Input.GetAction<SteamVR_Action_Pose>("Pose_right_tip");
-
-        SteamVR_Action_Pose poseActionL;
-        poseActionL = SteamVR_Input.GetAction<SteamVR_Action_Pose>("Pose_left_tip");
-
-        if (!Local_Head)
-        {
-            Local_Head.transform.position = NetWork_Head.transform.position;
-            Local_Head.transform.localRotation = NetWork_Head.transform.localRotation;
-        }
-
-        Local_LeftHand.transform.position = poseActionL[SteamVR_Input_Sources.LeftHand].localPosition;
-        Local_LeftHand.transform.localRotation = poseActionL[SteamVR_Input_Sources.LeftHand].localRotation;
-
-        Local_RightHand.transform.position = poseActionR[SteamVR_Input_Sources.RightHand].localPosition;
-        Local_RightHand.transform.localRotation = poseActionR[SteamVR_Input_Sources.RightHand].localRotation;
-
+        Local_Head.transform.position = NetWork_Head.transform.position;
+        Local_Head.transform.localRotation = NetWork_Head.transform.localRotation;
+        
+        Local_LeftHand.transform.position = NetWork_LeftHand.transform.position;
+        Local_LeftHand.transform.localRotation = NetWork_LeftHand.transform.localRotation;
+        
+        Local_RightHand.transform.position = NetWork_RightHand.transform.position;
+        Local_RightHand.transform.localRotation = NetWork_RightHand.transform.localRotation;
+        
     }
 
 
