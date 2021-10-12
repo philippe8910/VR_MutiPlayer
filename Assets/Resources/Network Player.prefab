@@ -586,15 +586,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa2f983e4cd0a047907978aad34fd92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Local_Head: {fileID: 0}
-  Local_LeftHand: {fileID: 0}
-  Local_RightHand: {fileID: 0}
-  NetWork_Head: {fileID: 6126536517383024002}
-  NetWork_LeftHand: {fileID: 6126536518221497156}
-  NetWork_RightHand: {fileID: 6126536516895390370}
-  NetWork_Head_Mesh: {fileID: 6126536517140485789}
-  NetWork_LeftHand_Mesh: {fileID: 6089182047887249250}
-  NetWork_RightHand_Mesh: {fileID: 2012229901730964056}
+  Local_Head: {fileID: 6126536517383024002}
+  Local_LeftHand: {fileID: 6126536518221497156}
+  Local_RightHand: {fileID: 6126536516895390370}
+  NetWork_Head: {fileID: 0}
+  NetWork_LeftHand: {fileID: 0}
+  NetWork_RightHand: {fileID: 0}
   _Photon: {fileID: 6126536517603603001}
 --- !u!1 &6126536518221497156
 GameObject:

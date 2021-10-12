@@ -19,6 +19,4 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
         PhotonNetwork.Destroy(SpaenPlayerPrefab);
         base.OnLeftRoom();
     }
-    
-    
 }
