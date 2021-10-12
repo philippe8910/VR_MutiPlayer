@@ -359,9 +359,6 @@ MonoBehaviour:
   Mesh_LeftHand: {fileID: 5536157947232502449}
   Mesh_RightHand: {fileID: 3862369393831969289}
   _Photon: {fileID: 5000444087730232167}
-  poseAction:
-    actionPath: /actions/default/in/Pose
-    needsReinit: 0
   inputSource: 2
 --- !u!114 &6882360616148443005
 MonoBehaviour:

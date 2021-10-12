@@ -12,7 +12,7 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
     {
         Debug.Log(PhotonNetwork.CountOfPlayers);
         
-        if (PhotonNetwork.CountOfPlayers == 0)
+        if (PhotonNetwork.CountOfPlayers == 1)
         {
             SpaenPlayerPrefab = PhotonNetwork.Instantiate("Network Player", pos[0].position, transform.rotation);
         }
