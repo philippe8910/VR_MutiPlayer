@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
 using UnityEngine.XR;
+using Valve.VR;
 
 public class NetworkPlayer : MonoBehaviourPun
 {
@@ -25,6 +26,11 @@ public class NetworkPlayer : MonoBehaviourPun
     public GameObject Mesh_RightHand;
 
     public PhotonView _Photon; 
+    
+    public SteamVR_Action_Pose poseAction = SteamVR_Input.GetAction<SteamVR_Action_Pose>("Pose");
+
+    [Tooltip("The device this action should apply to. Any if the action is not device specific.")]
+    public SteamVR_Input_Sources inputSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,21 +40,7 @@ public class NetworkPlayer : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
-        if (NetWork_Head == null)
-        {
-            NetWork_Head = PlayerManagermemt.LocalPlayerInstance.HeadHand;
-        }
-
-        if (NetWork_RightHand == null)
-        {
-            NetWork_RightHand = PlayerManagermemt.LocalPlayerInstance.RightHand;
-        }
-
-        if (NetWork_LeftHand == null)
-        {
-            NetWork_LeftHand = PlayerManagermemt.LocalPlayerInstance.LeftHand;
-        }
-
+        NetWork_RightHand.transform.position = poseAction[inputSource].velocity;
 
         if (_Photon.IsMine)
         {
