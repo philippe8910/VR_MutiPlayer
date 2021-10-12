@@ -3146,4 +3146,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpaenPlayerPrefab: {fileID: 0}
-  Cube: {fileID: 0}
+  Cube: {fileID: 787755215}
+  PlayerList: []
